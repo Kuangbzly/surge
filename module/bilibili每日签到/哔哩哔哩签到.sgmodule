@@ -8,11 +8,11 @@
  
 [Script]
 # BiliBili每日等级任务
-{{{B站每日等级任务}}} = type=cron, cronexp={{{定时}}}, script-path=https://raw.githubusercontent.com/Kuangbzly/surge--/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js?token=GHSAT0AAAAAADKHQWPRKBNG3QUNJ35ES4762FUQALQ,argument="coinsNum={{{投币数量}}}",wake-system=1,timeout=15
+{{{B站每日等级任务}}} = type=cron, cronexp={{{定时}}}, script-path=https://raw.githubusercontent.com/Kuangbzly/sruge/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js,argument="coinsNum={{{投币数量}}}",wake-system=1,timeout=15
 
-{{{B站Cookie(扫码)}}} = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/Kuangbzly/surge--/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js?token=GHSAT0AAAAAADKHQWPRKBNG3QUNJ35ES4762FUQALQ,requires-body=0,timeout=30
+{{{B站Cookie(扫码)}}} = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/Kuangbzly/sruge/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js,requires-body=0,timeout=30
 
-{{{B站Cookie(APP)}}} = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/Kuangbzly/surge--/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js?token=GHSAT0AAAAAADKHQWPRKBNG3QUNJ35ES4762FUQALQ,requires-body=0
+{{{B站Cookie(APP)}}} = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/Kuangbzly/sruge/refs/heads/main/module/bilibili%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E7%AD%BE%E5%88%B0.js,requires-body=0
 
 [MITM]
 hostname = %APPEND% app.bilibili.com

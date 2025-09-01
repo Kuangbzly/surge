@@ -1,5 +1,6 @@
 #!name=Github Private
 #!desc= [2025/7/21 02:13:52] 允许引用Github私有仓库/gist中的订阅分流，重写，脚本等配置文件。
+#!author=Peng-YM
 #!category=瞎折腾
 #!arguments=username:账户名,token:token
 #  模块链接
@@ -7,7 +8,7 @@
 
 
 [Script]
-Github Private = type=http-request, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Kuangbzly/surge/refs/heads/main/module/Github%20Private/Github%20Private.js?token=GHSAT0AAAAAADKHQWPQLHQDZUWKYECUDICO2FVS27A,argument="username={{{username}}}&token={{{token}}}"
+Github Private = type=http-request, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Kuangbzly/sruge/refs/heads/main/module/Github%20Private/Github%20Private.js,argument="username={{{username}}}&token={{{token}}}"
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com

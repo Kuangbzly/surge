@@ -9,5 +9,7 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 [URL Rewrite]
 URL-REGEX,^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user,REJECT
 
+[Script]
+
 [MITM]
 hostname = %APPEND% ossgw.alicdn.com
