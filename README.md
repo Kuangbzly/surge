@@ -18,3 +18,7 @@
 ## 特别鸣谢
 *   [@Peng-YM](https://github.com/Peng-YM)
 *   [@ClydeTime](https://github.com/ClydeTime)
+*   [@luestr](https://github.com/luestr)
+*   [@SukkaW](https://github.com/SukkaW)
+*   [@blackmatrix7](https://github.com/blackmatrix7)
+以上排名不分先后
