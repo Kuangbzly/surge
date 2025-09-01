@@ -21,4 +21,5 @@
 *   [@luestr](https://github.com/luestr)
 *   [@SukkaW](https://github.com/SukkaW)
 *   [@blackmatrix7](https://github.com/blackmatrix7)
-\n 以上排名不分先后
+
+* 以上排名不分先后
