@@ -1,5 +1,6 @@
 ## 规则排序建议
 *  将AI.list排在Proxy.list之前
+*  将apple_proxy.list 排在apple_cn.list 之前
 ## 📜 免责声明 / Disclaimer
 
 本仓库内所有内容均来自网络搜集和开源社区，在此对各位开发者与开源大佬的共享精神表示致敬与衷心感谢。所有原创版权均归原作者所有。
