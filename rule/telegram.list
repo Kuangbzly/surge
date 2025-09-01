@@ -1,0 +1,24 @@
+IP-ASN, 44907, no-resolve
+IP-ASN, 59930, no-resolve
+IP-ASN, 62014, no-resolve
+IP-ASN, 62041, no-resolve
+IP-ASN, 211157, no-resolve
+IP-CIDR,5.28.192.0/18,no-resolve
+IP-CIDR,109.239.140.0/24,no-resolve
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telegramdownload.com
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,graph.org
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,telesco.pe
+DOMAIN-KEYWORD,nicegram
+USER-AGENT,Telegram*
+PROCESS-NAME,org.telegram.messenger

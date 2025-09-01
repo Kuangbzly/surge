@@ -1,0 +1,13 @@
+#!name=掌上公交
+#!desc=去广告
+
+[Map Local]
+# 我的横幅广告
+^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet data-type=text data=" " status-code=200
+
+[Script]
+# > 掌上公交
+掌上公交小程序广告 = type=http-response,pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js, requires-body=true, timeout=60
+
+[Mitm]
+hostname = %APPEND% quanguo.mygolbs.com, wx.mygolbs.com

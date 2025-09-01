@@ -1,0 +1,6 @@
+DOMAIN,httpdns.bilivideo.com
+#bilibil自建站点
+AND,((DOMAIN-KEYWORD,cn-,extended-matching), (DOMAIN-SUFFIX,bilivideo.com,extended-matching))
+#bilibilimcdn
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.com

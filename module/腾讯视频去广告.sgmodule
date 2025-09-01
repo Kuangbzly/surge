@@ -1,0 +1,13 @@
+#!name=腾讯视频
+#!desc=腾讯视频去广告（仅适用于iPhone）
+#!category = 去广告
+
+[Rule]
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+
+[URL Rewrite]
+URL-REGEX,^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user,REJECT
+
+[MITM]
+hostname = %APPEND% ossgw.alicdn.com
