@@ -15,6 +15,6 @@
 
 请在使用前知悉并理解上述条款。如有任何侵权问题，请通过 Issues 联系我，我将第一时间进行处理。
 
-##特别鸣谢
+## 特别鸣谢
 *   [@Peng-YM](https://github.com/Peng-YM)
 *   [@ClydeTime](https://github.com/ClydeTime)
