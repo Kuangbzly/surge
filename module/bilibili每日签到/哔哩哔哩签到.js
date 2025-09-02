@@ -151,13 +151,11 @@ async function getCookie() {
 	await waitConfirmLoop(0, await loginConfirm(qrCode), qrCode)
 }
 
-// 解析 $argument
 let arg = {};
 if (typeof $argument !== 'undefined') {
-  // 将 $argument 按 & 分割并解析为键值对对象
   arg = Object.fromEntries(
     $argument.split('&').map(item => {
-      const [key, value] = item.split('='); // 使用 = 分割键和值
+      const [key, value] = item.split('=');
       return [key, value];
     })
   );
