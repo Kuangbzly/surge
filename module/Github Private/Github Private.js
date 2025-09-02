@@ -12,13 +12,13 @@ https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/gi
 [QX无法使用的说明]
 QX下载配置文件的请求不会触发脚本MITM重写。故无法使用。
 */
-// 解析 $argument
+
 let arg = {};
 if (typeof $argument !== 'undefined') {
-  // 将 $argument 按 & 分割并解析为键值对对象
+
   arg = Object.fromEntries(
     $argument.split('&').map(item => {
-      const [key, value] = item.split('='); // 使用 = 分割键和值
+      const [key, value] = item.split('=');
       return [key, value];
     })
   );
