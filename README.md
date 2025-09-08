@@ -1,5 +1,5 @@
 ## 规则排序建议
-*  将AI.list排在Proxy.list之前
+*  将AI.list排在Google.list之前
 *  将apple_proxy.list 排在apple_cn.list 之前
 ## 📜 免责声明
 
