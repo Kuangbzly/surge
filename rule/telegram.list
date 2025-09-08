@@ -1,24 +1,35 @@
-IP-ASN, 44907, no-resolve
-IP-ASN, 59930, no-resolve
-IP-ASN, 62014, no-resolve
-IP-ASN, 62041, no-resolve
-IP-ASN, 211157, no-resolve
-IP-CIDR,5.28.192.0/18,no-resolve
-IP-CIDR,109.239.140.0/24,no-resolve
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,telegra.ph
+DOMAIN,api.iturrit.com
+DOMAIN,api.imem.app
+DOMAIN,api.swiftgram.app
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,mbrx.app
+DOMAIN-SUFFIX,contest.com
 DOMAIN-SUFFIX,stel.com
 DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telegramdownload.com
-DOMAIN-SUFFIX,comments.app
-DOMAIN-SUFFIX,tx.me
-DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,tg.dev
+DOMAIN-SUFFIX,usercontent.dev
+DOMAIN-SUFFIX,quiz.directory
+DOMAIN-SUFFIX,telegram.dog
+DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,graph.org
-DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,telesco.pe
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,telegram.space
 DOMAIN-KEYWORD,nicegram
+IP-CIDR,5.28.192.0/18,no-resolve
+IP-CIDR,109.239.140.0/24,no-resolve
+IP-ASN,44907,no-resolve
+IP-ASN,59930,no-resolve
+IP-ASN,62014,no-resolve
+IP-ASN,62041,no-resolve
+IP-ASN,211157,no-resolve
 USER-AGENT,Telegram*
 PROCESS-NAME,org.telegram.messenger
