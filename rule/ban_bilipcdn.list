@@ -1,6 +1,6 @@
 DOMAIN,httpdns.bilivideo.com
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
-DOMAIN-WILDCARD,cn-*-ct-*-*.bilivideo.com
+DOMAIN-WILDCARD,cn-*-*-*-*.bilivideo.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,mcdn.bilivideo.com
 DOMAIN-SUFFIX,szbdyd.com
