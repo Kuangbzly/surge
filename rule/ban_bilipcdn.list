@@ -1,5 +1,5 @@
 DOMAIN,httpdns.bilivideo.com
-DOMAIN,*pcdn*.biliapi.com
+DOMAIN,*pcdn*.biliapi.net
 DOMAIN,cn-*-ct-*-*.bilivideo.com
 #AND,((DOMAIN-KEYWORD,cn-,extended-matching), (DOMAIN-SUFFIX,bilivideo.com,extended-matching))
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
