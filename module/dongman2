@@ -1,0 +1,23 @@
+let body = $response.body;
+
+try {
+    let obj = JSON.parse(body);
+    if (obj.data) {
+        for (let key in obj.data) {
+            if (obj.data[key].list) {
+                obj.data[key].list = [];
+            }
+        }
+    }
+    
+
+    if (obj.msg === "") {
+        obj.msg = "No Ads";
+    }
+
+    body = JSON.stringify(obj);
+} catch (e) {
+    console.log("GDT 脚本解析出错: " + e);
+}
+
+$done({ body });
