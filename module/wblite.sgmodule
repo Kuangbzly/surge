@@ -1,0 +1,16 @@
+#!name=微博轻享版
+#!desc=去除开屏广告，适应版本7.0.4
+#!category=瞎折腾
+
+[Rule]
+DOMAIN-SUFFIX,adkwai.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,xdmssp.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,unet.quark.cn,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,open.e.kuaishou.com,REJECT-TINYGIF,pre-matching,extended-matching
+
+[URL Rewrite]
+^https?:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/ - reject
+^https?:\/\/api\.weibo\.cn\/2\/ad\/ - reject
+
+[MITM]
+hostname = %APPEND% bootpreload.uve.weibo.com, api.weibo.cn
