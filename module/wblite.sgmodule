@@ -7,6 +7,8 @@ DOMAIN-SUFFIX,adkwai.com,REJECT-TINYGIF,pre-matching,extended-matching
 DOMAIN-SUFFIX,xdmssp.com,REJECT-TINYGIF,pre-matching,extended-matching
 DOMAIN-SUFFIX,unet.quark.cn,REJECT-TINYGIF,pre-matching,extended-matching
 DOMAIN-SUFFIX,open.e.kuaishou.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN,item.m.jd.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN,jstatic.3.cn,REJECT-TINYGIF,pre-matching,extended-matching
 
 [URL Rewrite]
 ^https?:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/ - reject
