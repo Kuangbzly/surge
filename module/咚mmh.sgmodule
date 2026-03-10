@@ -1,0 +1,24 @@
+#!name=咚漫漫画
+#!desc=咚漫漫画去开屏、去广告、去弹窗，适用版本3.3.5，使用前请卸载重装
+#!category=瞎折腾
+
+[Rule]
+DOMAIN-SUFFIX,heic.alicdn.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,adashx.m.taobao.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,gdt.qq.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,sdk.e.qq.com,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,sdk.1rtb.net,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,hsapi.dongmanmanhua.cn,REJECT-TINYGIF,pre-matching,extended-matching
+DOMAIN-SUFFIX,task.dongmanmanhua.cn,REJECT-TINYGIF,pre-matching,extended-matching
+
+[URL Rewrite]
+^https?:\/\/cdn\.dongmanmanhua\.cn\/(banner\/mainPoupBanner\/|image\/viewer\/adv_.*\.png) - reject
+
+[Map Local]
+^https?:\/\/apis\.dongmanmanhua\.cn\/app\/popup\/list data-type=text data='{"message":{"result":{"config":null}},"code":200}'
+
+[MITM]
+hostname=%APPEND% apis.dongmanmanhua.cn,cdn.dongmanmanhua.cn
