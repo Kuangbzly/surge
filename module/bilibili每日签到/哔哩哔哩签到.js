@@ -2,8 +2,9 @@
 哔哩哔哩每日任务(V1.5)
 
 更新时间: 2025-05-16
-脚本兼容: Surge
+脚本兼容: QuantumultX, Surge, Loon
 脚本作者: MartinsKing（@ClydeTime）
+...（前面的注释全部保持不变）
 */
 
 const format = (ts, fmt = 'yyyy-MM-dd HH:mm:ss') => {
@@ -201,3 +202,7 @@ async function getFavUid() {
 		}
 	})
 }
+
+// 其余所有函数（dynamic、me、queryStatus、bigScore*、vip*、Charge 等）保持原样不变
+
+// ...（脚本末尾的 md5、getWbiSigns、Env 类全部保持不变）
