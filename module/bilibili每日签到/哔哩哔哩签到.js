@@ -480,31 +480,28 @@ async function coin() {
 			}
 			await $.fetch(myRequest).then(async response => {
 				try {
+					const beforeCoins = Number(config.coins.num || 0)
 					const res = $.toObj(response.body)
-					if (res?.code === 0) {
-						if (res?.message === "0") {
-							$.log("- 投币成功")
-							config.user.money -= 1
-							config.coins.num += 10
-							config.coins.time = startTime
-							$.setItem($.name + "_daily_bonus", $.toStr(config))
-						} 
-						else if (res?.message === "OK" || (typeof res?.message === 'string' && res.message.includes("超过投币上限"))) {
-							$.log(`- 该视频已投币或达到上限，跳过 (${res.message})`)
-						} 
-						else {
-							$.log("- 投币失败,原因 " + (res?.message || "未知"))
-							config.coins.failures = (config.coins.failures || 0) + 1
-							if (config.coins.failures < 8) {
-								$.log(`- 正在重试...重试次数 ${config.coins.failures - 1}`)
-								await $.wait(500)
-								await coin()
-							}
-						}
+					$.log(`- 投币接口返回 code=${res?.code}, message=${res?.message}`)
+
+					if (res?.code === 0 && res?.message === "0") {
+						$.log("- 投币成功")
+						config.user.money -= 1
+						config.coins.num += 10
+						config.coins.time = startTime
+						$.setItem($.name + "_daily_bonus", $.toStr(config))
 					} else {
-						$.log("- 投币接口异常, code: " + res?.code)
+						// 当 code 不为 0 时，立即复核今日投币经验
+						$.log("- 接口返回 code ≠ 0，立即复核今日投币经验...")
+						const verified = await verifyCoinResult(beforeCoins)
+						if (verified) {
+							return;  // 复核成功，视为投币已完成，不再重试
+						}
+						// 复核也失败，才记录失败并重试
+						$.log("- 投币失败且复核未确认增加,原因 " + (res?.message || "未知"))
 						config.coins.failures = (config.coins.failures || 0) + 1
 						if (config.coins.failures < 8) {
+							$.log(`- 正在重试...重试次数 ${config.coins.failures - 1}`)
 							await $.wait(500)
 							await coin()
 						}
@@ -519,6 +516,40 @@ async function coin() {
 	} else {
 		$.log("- 获取随机关注用户列表失败")
 	}
+}
+
+// 新增：当投币接口 code ≠ 0 时复核今日投币经验
+async function verifyCoinResult(beforeCoins) {
+	const myRequest = {
+		url: "https://api.bilibili.com/x/member/web/exp/reward",
+		headers: {
+			...baseHeaders
+		}
+	}
+	return await $.fetch(myRequest).then(response => {
+		try {
+			const body = $.toObj(response.body)
+			if (body?.code !== 0) {
+				$.log("- 复核投币经验失败")
+				return false
+			}
+			const latestCoins = Number(body?.data?.coins || 0)
+			if (latestCoins > beforeCoins) {
+				$.log(`- 接口返回异常，但复核确认今日投币经验已增加 ${latestCoins - beforeCoins}`)
+				config.coins.num = latestCoins
+				config.coins.time = startTime
+				$.setItem($.name + "_daily_bonus", $.toStr(config))
+				return true
+			} else {
+				config.coins.num = latestCoins
+				$.setItem($.name + "_daily_bonus", $.toStr(config))
+				return false
+			}
+		} catch (e) {
+			$.logErr(e, response)
+			return false
+		}
+	})
 }
 
 async function getFavUid() {
